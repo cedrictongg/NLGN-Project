@@ -1,0 +1,38 @@
+Tutorial taken from: https://thisiswhatiknowabout.blogspot.com/2011/12/jbox2d-tutorial-creating-object-body.html
+
+Static Body:
+
+1. Static bodies have zero velocity.
+2. Static bodies do not move under simulations.
+3. Static bodies can be moved manually by user.
+4. Static bodies have infinite mass.
+5. Static bodies do not collide with other static and kinematic bodies.
+		Examples - Ground, Walls.
+
+Dynamic Body:
+
+1. Dynamic bodies move under simulation.
+2. Dynamic bodies respond to the forces and they move accordingly.
+3. Dynamic bodies can be moved manually.
+4. Dynamic bodies always have non-zero mass. If mass is set to zero then it acquires 1Kg mass.
+5. Dynamic bodies collide with dynamic, kinematic and static body types.
+		Examples – Ball, Box,
+
+
+Kinematic Body:
+
+1. Under simulation, kinematic bodies move according to its velocity.
+2. Kinematic bodies do not move according to forces.
+3. Kinematic bodies can be moved manually by user.
+4. Kinematic bodies have infinite mass.
+5. Kinematic bodies do not collide with static or kinematic bodies.
+6. Kinematic body’s movement does not get affected by gravity.
+7. Kinematic body’s movement does not get affected when dynamic bodies are collided with it.
+		Example – moving platforms in games.
+
+A physics engine is not a game engine. Box2D is very good at simulating physics but it is not intended to draw nice graphics, use the network, build worlds or load a game level for you.
+
+JBox2D is written in Java, but it was originally written in C++. It was ported to many different languages such as Python, JavaScript, C#, and others.
+It's also open-source and free.
+
+A physics engine simulates the physics of objects to give them believable real-life movement. Although it can be used for other applications, the project was used primarily as a library for use in games, and games make up the majority of software using Box2D
