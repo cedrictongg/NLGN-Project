@@ -30,9 +30,12 @@ Kinematic Body:
 7. Kinematic body’s movement does not get affected when dynamic bodies are collided with it.
 		Example – moving platforms in games.
 
-A physics engine is not a game engine. Box2D is very good at simulating physics but it is not intended to draw nice graphics, use the network, build worlds or load a game level for you.
+A physics engine is not a game engine. Box2D is very good at simulating physics but it is not intended to: draw nice graphics, use the network, build worlds or load a game level for you.
 
 JBox2D is written in Java, but it was originally written in C++. It was ported to many different languages such as Python, JavaScript, C#, and others.
+
 It's also open-source and free.
 
-A physics engine simulates the physics of objects to give them believable real-life movement. Although it can be used for other applications, the project was used primarily as a library for use in games, and games make up the majority of software using Box2D
+A physics engine simulates the physics of objects to give them believable real-life movement.
+
+Although it can be used for other applications, the project was used primarily as a library for use in games, and games make up the majority of software using Box2D
