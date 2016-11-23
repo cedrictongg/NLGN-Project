@@ -48,11 +48,8 @@ public class Ball {
 		this.gradient = Utils.getBallGradient(color);
 		node = create();
 	}
-
-	/**
-	 * This method creates a ball by using Circle object from JavaFX and
-	 * CircleShape from JBox2D
-	 */
+	
+	// create ball from javafx and jbox2d
 	private Node create() {
 		// Create an UI for ball - JavaFX code
 		Circle ball = new Circle();
@@ -92,6 +89,8 @@ public class Ball {
 		Body body = Utils.world.createBody(bd);
 		body.createFixture(fd);
 		ball.setUserData(body);
+		// http://www.iforce2d.net/b2dtut/custom-gravity
+		body.setGravityScale(1); // -1 reverses gravity, 0 cancels gravity
 		return ball;
 	}
 }

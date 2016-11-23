@@ -40,10 +40,7 @@ public class Main extends Application {
 
 		Random r = new Random(System.currentTimeMillis());
 
-		/**
-		 * Generate balls and position them on random locations. Random
-		 * locations between 5 to 95 on x axis and between 100 to 500 on y axis
-		 */
+		// generates random balls
 		for (int i = 0; i < Utils.NO_OF_BALLS; i++) {
 			ball[i] = new Ball(r.nextInt(90) + 5, r.nextInt(400) + 100);
 		}
@@ -67,7 +64,7 @@ public class Main extends Application {
 			public void handle(ActionEvent t) {
 				// Create time step. Set Iteration count 8 for velocity and for positions
 				Utils.world.step(1.0f / 60.f, 8, 3);
-
+				
 				// Move balls to the new position computed by JBox2D
 				for (int i = 0; i < Utils.NO_OF_BALLS; i++) {
 					Body body = (Body) ball[i].node.getUserData();
@@ -81,7 +78,7 @@ public class Main extends Application {
 
 		/**
 		 * Set ActionEvent and duration to the KeyFrame. The ActionEvent is
-		 * trigged when KeyFrame execution is over.
+		 * triggered when KeyFrame execution is over.
 		 */
 		KeyFrame frame = new KeyFrame(duration, ae, null, null);
 
