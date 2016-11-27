@@ -34,12 +34,14 @@ public class Ball {
 	// Gradient effects for balls
 	private LinearGradient gradient;
 
+	// overloading
 	public Ball(float posX, float posY) {
 		this(posX, posY, Utils.BALL_SIZE, BodyType.DYNAMIC, Color.RED);
 		this.posX = posX;
 		this.posY = posY;
 	}
-
+	
+	// overloading
 	public Ball(float posX, float posY, int radius, BodyType bodyType, Color color) {
 		this.posX = posX;
 		this.posY = posY;
@@ -90,7 +92,7 @@ public class Ball {
 		body.createFixture(fd);
 		ball.setUserData(body);
 		// http://www.iforce2d.net/b2dtut/custom-gravity
-		body.setGravityScale(1); // -1 reverses gravity, 0 cancels gravity
+		body.setGravityScale(1); // -1 reverses gravity, 0 cancels gravity, 1+ increases gravity
 		return ball;
 	}
 }
