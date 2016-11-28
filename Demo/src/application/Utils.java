@@ -48,11 +48,12 @@ public class Utils {
 	public static void addWall(float posX, float posY, float width, float height) {
 		PolygonShape ps = new PolygonShape();
 		ps.setAsBox(width, height);
-
+		
+		// changing wall properties
 		FixtureDef fd = new FixtureDef();
 		fd.shape = ps;
 		fd.density = 1.0f;
-		fd.friction = 0.3f;
+		fd.friction = 0.3f; // gives wall some friction
 
 		BodyDef bd = new BodyDef();
 		bd.position.set(posX, posY);

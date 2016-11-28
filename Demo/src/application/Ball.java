@@ -73,15 +73,14 @@ public class Ball {
 		bd.position.set(posX, posY);
 
 		CircleShape cs = new CircleShape();
-		cs.m_radius = radius * 0.1f; // We need to convert radius to JBox2D
-										// equivalent
+		cs.m_radius = radius * 0.1f;
 
 		// Create a fixture for ball
 		FixtureDef fd = new FixtureDef();
 		fd.shape = cs;
 		fd.density = 0.9f;
-		fd.friction = 0.3f;
-		fd.restitution = 0.6f;
+		fd.friction = 0.3f; // how easy it is for objects to slide past each other
+		fd.restitution = 0.6f; // restitution determines how "bouncy" an object is
 
 		/**
 		 * Virtual invisible JBox2D body of ball. Bodies have velocity and

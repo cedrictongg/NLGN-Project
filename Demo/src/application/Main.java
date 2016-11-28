@@ -27,7 +27,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 
-		primaryStage.setTitle("Hello JBox2d World!");
+		primaryStage.setTitle("JBox2D Demo");
 		primaryStage.setFullScreen(false);
 		primaryStage.setResizable(false);
 
@@ -48,8 +48,7 @@ public class Main extends Application {
 		// Add ground to the application, this is where balls will land
 		Utils.addGround(100, 10);
 
-		// Add left and right walls so balls will not move outside the viewing
-		// area.
+		// walls so balls will not move outside the viewing area.
 		Utils.addWall(0, 100, 1, 100); // Left wall
 		Utils.addWall(99, 100, 1, 100); // Right wall
 
