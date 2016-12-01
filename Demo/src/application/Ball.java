@@ -24,9 +24,9 @@ public class Ball {
 	private int radius;
 
 	/**
-	 * There are three types bodies in JBox2D – Static, Kinematic and dynamic In
-	 * this application static bodies (BodyType.STATIC – non movable bodies) are
-	 * used for drawing hurdles and dynamic bodies (BodyType.DYNAMIC–movable
+	 * There are three types bodies in JBox2D ï¿½ Static, Kinematic and dynamic In
+	 * this application static bodies (BodyType.STATIC ï¿½ non movable bodies) are
+	 * used for drawing hurdles and dynamic bodies (BodyType.DYNAMICï¿½movable
 	 * bodies) are used for falling balls
 	 */
 	private BodyType bodyType;
@@ -40,7 +40,7 @@ public class Ball {
 		this.posX = posX;
 		this.posY = posY;
 	}
-	
+
 	// overloading
 	public Ball(float posX, float posY, int radius, BodyType bodyType, Color color) {
 		this.posX = posX;
@@ -50,7 +50,7 @@ public class Ball {
 		this.gradient = Utils.getBallGradient(color);
 		node = create();
 	}
-	
+
 	// create ball from javafx and jbox2d
 	private Node create() {
 		// Create an UI for ball - JavaFX code
@@ -67,7 +67,7 @@ public class Ball {
 
 		ball.setCache(true); // Cache this object for better performance
 
-		// Create an JBox2D body defination for ball.
+		// Create an JBox2D body definition for ball.
 		BodyDef bd = new BodyDef();
 		bd.type = bodyType;
 		bd.position.set(posX, posY);
